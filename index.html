@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pausa activa</title> 
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div class="top">
+        <div class="length-control">
+            <h2 id="break-label">Break Length</h2>
+            <div class="length-control-buttons">
+                <button id="break-decrement">⬇</button>
+                <span id="break-length">5</span>
+                <button id="break-increment">⬆</button>
+            </div>
+        </div>
+        <div class="length-control">
+            <h2 id="session-label">Session Length</h2>
+            <div class="length-control-buttons">
+                <button id="session-decrement">⬇</button>
+                <span id="session-length">25</span>
+                <button id="session-increment">⬆</button>
+            </div>
+        </div>
+    </div>
+    <div class="middle">
+        <div class="title"><span id="timer-label">Session</span></div>
+        <div class="timer"><span id="time-left">25:00</span></div>
+    </div>
+    <div class="botton">
+        <button id="start_stop">🏃‍♂️</button> <button id="reset">✂</button>
+    </div>
+    <audio src="./assets/build_testable-projects-fcc_audio_BeepSound.wav" id="beep"></audio>
+    <script src="./src/main.js"></script>
+</body>
+</html>
