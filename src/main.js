@@ -74,7 +74,8 @@ function sessionLengthFN(value){
     let min=toNumber(value)
     globalTime=min
     min=min-1
-    globalTime
+    seg=59
+    
     
     timerLabel.innerHTML='Session'
     
@@ -93,20 +94,24 @@ function sessionLengthFN(value){
             clearInterval(segInterval)
             beep.play()
             breakLengthFN(breakT)
-          }else if(min>0 && seg===0){
-            min--
-            seg=59
+          }else if(min>0){
+            if(seg==0){
+                min--
+                seg=59
+            }else{
             segP=seg.toString().padStart(2,'0')
             minP=min.toString().padStart(2,'0')
             timeLeft.innerHTML=`${minP}:${segP}`
+            }
           }
-        },1000)
+        },100)
 
 }
 
 function breakLengthFN(value){
-    let min=toNumber(value)
-    min=min-1
+    let min=toNumber(value)-1
+    seg=59
+    
     
     timerLabel.innerHTML='Break'
     
@@ -124,14 +129,17 @@ function breakLengthFN(value){
         clearInterval(segInterval)
         beep.play()
         sessionLengthFN(globalTime)
-      }else if(min>0 && seg===0){
-        min--
-        seg=59
+      }else if(min>0){
+        if(seg==0){
+            min--
+            seg=59
+        }else{
         segP=seg.toString().padStart(2,'0')
         minP=min.toString().padStart(2,'0')
         timeLeft.innerHTML=`${minP}:${segP}`
+        }
       }
-    },1000)
+    },100)
     
 }
 
