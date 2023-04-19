@@ -104,7 +104,7 @@ function sessionLengthFN(value){
             timeLeft.innerHTML=`${minP}:${segP}`
             }
           }
-        },100)
+        },1000)
 
 }
 
@@ -139,7 +139,7 @@ function breakLengthFN(value){
         timeLeft.innerHTML=`${minP}:${segP}`
         }
       }
-    },100)
+    },1000)
     
 }
 
